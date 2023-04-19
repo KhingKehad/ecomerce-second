@@ -1,0 +1,1382 @@
+.cart {
+    // background-color: green;
+    background-color: #f5f5f5;
+    width: 100%; 
+     //width: 1450px;
+      position: absolute ;
+      top: 0;
+      z-index: 1;
+      margin-top: 0 !important;
+      overflow-y: scroll;
+      -moz-backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+}
+ 
+
+.div {
+   // background-color: red;
+    width: 80% ;
+    margin: 0 auto;
+    height: min-content;
+    padding: 2rem;
+    //margin: auto 40px
+//     position: fixed;
+//   top: 50%;
+  //left: 25%;
+  overflow-y: scroll;
+}
+
+
+/* ORIGINAL STYLE
+.div {
+    background-color: green;
+    width: 100% !important; 
+}
+
+.cart {
+    background-color: red;
+    width: 80% ;
+    margin: 0 auto;
+    //margin: auto 40px
+}
+*/
+
+
+
+.cart__body {
+   // background-color: #f5f5f5;
+    display: flex;
+    //justify-content: space-between;
+    overflow-y: scroll;
+
+    &---main {
+        //background-color: blue;
+        flex: 1;
+
+        &--header {
+            padding: 0 24px;
+            background-color: white;
+            //font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+
+            &-text {
+                font-size: 1.5rem;
+                font-weight: 700;
+                padding: 2rem;
+            }
+
+            &-close {
+                font-size: 1.5rem;
+                font-weight: 700;
+                padding: 2rem;
+                background-color: #dbb613;
+                cursor: pointer;
+            }
+            &-close:hover{
+                color: white;
+            }
+        }
+        &--checkbox {
+            background-color: white;
+            padding: 16px 24px;
+        }
+        &--combine {
+            background-color: #f9e9a4;
+            padding: 0.8rem;
+            margin-top: 8px;
+
+            &-text {
+                color: #dfb600;
+                font-weight: 500;
+            }
+            
+        }
+        &--list {
+            overflow-y: scroll;
+
+            &-gen {
+                background-color: #fff;
+                background-color: #dfb600;
+
+                &-nocart {
+                    margin-top: 8px;
+                    height: 32rem;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    //padding: 25px 24px;
+
+                    &-text {
+                        font-size: 5rem;
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+                }
+
+            }
+
+            &-store {
+                margin-top: 8px;
+                padding: 0 24px;
+                background-color: #fff;
+
+                &-block {
+                    padding: 1rem;
+                }
+
+                &-wrap {
+                    //background-color: goldenrod;
+                    display: flex;
+                    padding: 1rem;
+                    border-top: 1px solid black;
+
+                    &-imgcont {
+                        width: 25%;
+                       // border-right: 2px solid black;
+
+                        &-img {
+                            height: 8rem;
+                            width: 8rem;
+                            overflow: hidden;
+                            object-fit: cover;
+                            //backface-visibility: hidden;
+                            //overflow-y: scroll;  
+                        } 
+                    }
+
+                    &-prop {
+                        //display: flex;
+                        flex: 1;
+
+                        &-chara {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            &-name {
+                                font-size: 1.3rem;
+                                text-transform:capitalize;
+                            }
+
+                            &-del {
+
+                                button {
+
+                                    svg {
+                                        
+                                        // stroke: black;
+                                        // stroke-width: 2px;
+                                    }
+
+                                    svg:hover {
+                                        fill: #E0C340;
+                                    }
+                                   // background-color: red;
+                                    border: none;
+                                    background-color: none;
+                                    outline: none;
+                                    background-color: #fff
+                                }
+                                
+                            }
+                        }
+
+                        &-location {
+                            margin-top: 0.5rem;
+                            background-color: #f5f5f5;
+                            //background-color: #ccc;
+                            width: max-content;
+                            padding: 0 10px;
+                            border-radius: 10px;
+                        }
+                        &-location:hover {
+                            //background-color: #757575;
+                           background-color: #ccc;
+                        }
+
+                        &-atr {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-top: 1.5rem;
+
+                            &-price {
+                                font-size: 1.3rem;
+                                font-weight: 500;
+                            }
+
+                            &-input {
+                                display: flex;
+
+                                div {
+                                    
+                                    // background-color: green;
+                                    // height: 3rem;
+                                    // width: 2rem;
+                                    // border-radius: 10px;
+
+                                    span {
+                                        background-color: #f5f5f5;
+                                        height: 25px;
+                                        width: 25px;
+                                        border-radius: 50%;
+                                        padding: 0.3rem;
+                                        text-align: right;
+                                        cursor: pointer;
+                                        display: inline-block;
+
+                                        svg {
+                                            fill: black;
+                                            height: 0.7rem;
+                                            cursor: pointer;
+                                            text-align: center;
+                                            
+                                        }
+                                    }
+                                    
+                                    border: none;
+                                    outline: none;
+                                    background-color: #fff
+                                }
+
+                                &-value {
+
+                            
+                                    width: 1rem;
+                                    overflow: hidden;
+                                    backface-visibility: hidden;
+                                    border: none;
+                                    text-align: center;
+                                    outline: none;
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    &---side {
+        //background-color: yellow;
+        //background-color: white;
+        margin-left: 1rem;
+        position: -webkit-sticky;
+        position: sticky;
+        // position: fixed;
+        // right: 10%;
+        top: 0px;
+        margin-left: 20px;
+        width: 380px;
+        height: -webkit-max-content;
+        height: -moz-max-content;
+        height: max-content;
+          
+
+        //padding: 1.5rem;
+
+        &--summary {
+            margin-bottom: 0.5rem;
+            //background-color: red;
+            background-color: white;
+            padding: 1rem;
+
+            &-text {
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+
+            &-total {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem;
+
+                &-price {
+                    padding-right: 1rem;
+                    font-size: 1.5rem;
+                    //margin-right: 1rem;
+                }
+            }
+
+            &-btn {
+                display: block;
+                width: 90%;
+                padding: 10px 10px;
+                margin-bottom: 0.5rem;
+                border-radius: 20px;
+                border: none;
+                background-color: #E0C340;
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: #fff;
+                text-align: center;
+                margin-left: 0.5rem;
+                //margin: 20px auto;
+                text-decoration: none;
+            }
+
+            &-btn:hover {
+                background-color: #dbb613;
+            }
+        }
+
+        &--structure {
+            background-color: green;
+            margin-top: 0.5rem;
+            background-color: white;
+            padding: 1rem;
+
+            &-name {
+                font-size: 1.2rem;
+                font-weight: 600;
+                padding-bottom: 0.5rem;
+            }
+
+            &-payment {
+                width: max-content;
+                display: flex;
+                justify-content: space-evenly;
+                
+                img {
+                    margin-right: 1rem;
+                    padding-bottom: 01rem;
+                    height: 1rem;
+                    // width: 2rem;
+
+                }
+            }
+
+            &-header {
+                font-size: 1.2rem;
+                font-weight: 600;
+                padding-top: 1rem;
+                border-top: 2px solid black;
+            }
+        
+        }
+    }
+
+}
+
+.notify-card {
+    padding: 1rem;
+    background-color: #E0C340;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    &__text {
+        color: white;
+        color: #E0C340;
+        font-weight: 600;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+    .cart__body {
+        &---main {
+    
+            &--header {
+    
+                &-text {
+
+                }
+    
+                &-close {
+                }
+            }
+            &--checkbox {
+
+            }
+            &--combine {
+    
+                &-text {
+                }
+                
+            }
+            &--list {
+                &-gen {
+    
+                    &-nocart {
+    
+                        &-text {
+                        }
+                    }
+    
+                }
+    
+                &-store {
+    
+                    &-block {
+
+                    }
+    
+                    &-wrap {
+                        &-imgcont {   
+                            width: 0%;
+                            &-img {
+                                height: 6rem;
+                                width: 6rem;
+                            } 
+                        }
+    
+                        &-prop { 
+                            margin-left: 7rem;
+                            &-chara {
+                                &-name {
+                                    font-size: 1rem;
+                                }
+    
+                                &-del {
+                                   
+    
+                                    button {
+                                       
+                                        svg {
+                                            height: 1.2rem; 
+                                        }
+                                    }                                   
+                                }
+                            }
+    
+                            &-location {
+                                padding: 0 10px;
+                                font-size: small;
+                            }
+                           
+    
+                            &-atr {
+                                &-price {
+                                    
+                                    &-sign {
+                                        font-size: 1rem;
+                                    }
+                                }
+                                &-money {
+                                }
+    
+                                &-input {
+                                    div {
+    
+                                        span {
+                                            padding: 0.1rem;
+    
+                                            svg {
+                                                height: 0.6rem;                                  
+                                            }
+                                        }
+                                        
+                                     
+                                    }
+    
+                                    &-value {
+    
+                                
+            
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+            }
+        }
+        &---side {
+            width: 300px;
+    
+            &--summary {
+    
+                &-text {
+                }
+    
+                &-total {
+
+                    &-price {
+                        font-size: 1.3rem;
+                    }
+                }
+    
+                &-btn {
+                    font-size: 1rem;
+                }
+
+            }
+    
+            &--structure {
+                &-name {
+                    font-size: 1rem;
+                }
+    
+                &-payment {
+                    img {
+                        height: 0.8rem;
+                    }
+                }
+    
+                &-header {
+                    font-size: 1rem;
+                }
+                &-text {
+                    font-size: small;
+                }
+            
+            }
+        }
+    }
+}
+@media screen and (max-width: 1000px) {
+    .div {
+        width: 95%;
+        padding: 1rem;
+
+    }
+    .cart__body {
+        &---main {
+    
+            &--header {
+    
+                &-text {
+
+                }
+    
+                &-close {
+                }
+            }
+            &--checkbox {
+
+            }
+            &--combine {
+    
+                &-text {
+                }
+                
+            }
+            &--list {
+                &-gen {
+    
+                    &-nocart {
+    
+                        &-text {
+                        }
+                    }
+    
+                }
+    
+                &-store {
+    
+                    &-block {
+
+                    }
+    
+                    &-wrap {
+                        &-imgcont {   
+                            width: 0%;
+                            &-img {
+                                height: 6rem;
+                                width: 6rem;
+                            } 
+                        }
+    
+                        &-prop { 
+                            margin-left: 7rem;
+                            &-chara {
+                                &-name {
+                                    font-size: 1rem;
+                                }
+    
+                                &-del {
+                                   
+    
+                                    button {
+                                       
+                                        svg {
+                                            height: 1.2rem; 
+                                        }
+                                    }                                   
+                                }
+                            }
+    
+                            &-location {
+                                padding: 0 10px;
+                                font-size: small;
+                            }
+                           
+    
+                            &-atr {
+                                &-price {
+                                    
+                                    &-sign {
+                                        font-size: 1rem;
+                                    }
+                                }
+                                &-money {
+                                }
+    
+                                &-input {
+                                    div {
+    
+                                        span {
+                                            padding: 0.1rem;
+    
+                                            svg {
+                                                height: 0.6rem;                                  
+                                            }
+                                        }
+                                        
+                                     
+                                    }
+    
+                                    &-value {
+    
+                                
+            
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+            }
+        }
+        &---side {
+            width: 300px;
+    
+            &--summary {
+    
+                &-text {
+                }
+    
+                &-total {
+
+                    &-price {
+                        font-size: 1.3rem;
+                    }
+                }
+    
+                &-btn {
+                    font-size: 1rem;
+                }
+
+            }
+    
+            &--structure {
+                &-name {
+                    font-size: 1rem;
+                }
+    
+                &-payment {
+                    img {
+                        height: 0.8rem;
+                    }
+                }
+    
+                &-header {
+                    font-size: 1rem;
+                }
+                &-text {
+                    font-size: small;
+                }
+            
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .cart__body {
+        flex-direction: column;
+        &---main {
+    
+            &--header {
+    
+                &-text {
+
+                }
+    
+                &-close {
+                }
+            }
+            &--checkbox {
+
+            }
+            &--combine {
+    
+                &-text {
+                }
+                
+            }
+            &--list {
+                &-gen {
+    
+                    &-nocart {
+    
+                        &-text {
+                        }
+                    }
+    
+                }
+    
+                &-store {
+    
+                    &-block {
+
+                    }
+    
+                    &-wrap {
+                        &-imgcont {   
+                            width: 0%;
+                            &-img {
+                                height: 6rem;
+                                width: 6rem;
+                            } 
+                        }
+    
+                        &-prop { 
+                            margin-left: 7rem;
+                            &-chara {
+                                &-name {
+                                    font-size: 1rem;
+                                }
+    
+                                &-del {
+                                   
+    
+                                    button {
+                                       
+                                        svg {
+                                            height: 1.2rem; 
+                                        }
+                                    }                                   
+                                }
+                            }
+    
+                            &-location {
+                                padding: 0 10px;
+                                font-size: small;
+                            }
+                           
+    
+                            &-atr {
+                                &-price {
+                                    
+                                    &-sign {
+                                        font-size: 1rem;
+                                    }
+                                }
+                                &-money {
+                                }
+    
+                                &-input {
+                                    div {
+    
+                                        span {
+                                            padding: 0.1rem;
+    
+                                            svg {
+                                                height: 0.6rem;                                  
+                                            }
+                                        }
+                                        
+                                     
+                                    }
+    
+                                    &-value {
+    
+                                
+            
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+            }
+        }
+        &---side {
+            width: 100%;
+            margin-top: 1rem;
+            margin-left: 0rem;
+            // position: fixed;
+            // bottom: 15%;
+    
+            &--summary {
+                
+                &-text {
+                }
+    
+                &-total {
+
+                    &-price {
+                        font-size: 1.3rem;
+                    }
+                }
+    
+                &-btn {
+                    font-size: 1rem;
+                }
+
+            }
+    
+            &--structure {
+                display: none;
+                &-name {
+                    font-size: 1rem;
+                }
+    
+                &-payment {
+                    img {
+                        height: 0.8rem;
+                    }
+                }
+    
+                &-header {
+                    font-size: 1rem;
+                }
+                &-text {
+                    font-size: small;
+                }
+            
+            }
+        }
+    }
+}
+@media screen and (max-width: 650px) {
+    .div {
+        padding: 0;
+        width: 95%;
+    }
+    .cart__body {
+        flex-direction: column;
+        &---main {
+    
+            &--header {
+    
+                &-text {
+
+                }
+    
+                &-close {
+                }
+            }
+            &--checkbox {
+
+            }
+            &--combine {
+    
+                &-text {
+                }
+                
+            }
+            &--list {
+                &-gen {
+    
+                    &-nocart {
+    
+                        &-text {
+                        }
+                    }
+    
+                }
+    
+                &-store {
+    
+                    &-block {
+                        padding: 0.3rem;
+                        font-size: 13px;
+                    }
+    
+                    &-wrap {
+                        
+                        &-imgcont {  
+                            width: 0; 
+                            &-img {
+                                height: 4rem;
+                                width: 4rem;
+                            } 
+                        }
+    
+                        &-prop { 
+                            margin-left: 5rem;
+                            &-chara {
+                                &-name {
+                                    // font-size: 1rem;
+                                    font-size: 12px;
+                                }
+    
+                                &-del {
+                                   
+    
+                                    button {
+                                       
+                                        svg {
+                                            height: 1rem; 
+                                        }
+                                    }                                   
+                                }
+                            }
+    
+                            &-location {
+                                // padding: 0 10px;
+                                font-size: 9px;
+                                margin-top: 2px;
+                            }
+                           
+    
+                            &-atr {
+                                margin-top: 5px;
+                                &-price {
+                                    
+                                    &-sign {
+                                        font-size: 0.8rem;
+                                    }
+                                }
+                                &-money {
+                                }
+    
+                                &-input {
+                                    div {
+                                        // height: 0.1px;
+                                        span {
+                                            // padding: 0.1rem;
+                                            // height: 1;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            svg {
+                                                height: 0.7rem;                                  
+                                            }
+                                        }
+                                        
+                                     
+                                    }
+    
+                                    &-value {
+                                        font-size: 13.5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+            }
+        }
+        &---side {
+            width: 100%;
+            margin-top: 1rem;
+            margin-left: 0rem;
+            // position: fixed;
+            // bottom: 15%;
+    
+            &--summary {
+                
+                &-text {
+                    font-size: 16px;
+                }
+    
+                &-total {
+
+                    &-price {
+                        font-size: 1rem;
+                    }
+                }
+    
+                &-btn {
+                    font-size: 16px;
+                }
+
+            }
+    
+            &--structure {
+                display: none;
+                &-name {
+                    font-size: 1rem;
+                }
+    
+                &-payment {
+                    img {
+                        height: 0.8rem;
+                    }
+                }
+    
+                &-header {
+                    font-size: 1rem;
+                }
+                &-text {
+                    font-size: small;
+                }
+            
+            }
+        }
+    }
+}
+.cart-spinner2 {
+    // margin: 5rem auto;
+     text-align: center;
+     padding-top: 3rem;
+     padding-bottom: 3rem;
+   
+     svg {
+       height: 3rem;
+       width: 3rem;
+       fill: #dbb613;
+       fill: #E0C340;
+       //fill: red;
+       animation: rotate 2s infinite linear;
+     }
+}
+.cart-feed-position {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.full-hidden2 {
+    display: none;
+}
+
+// @media screen and (max-width: 400px) {
+//     .cart__body {
+//         flex-direction: column;
+//         &---main {
+    
+//             &--header {
+    
+//                 &-text {
+
+//                 }
+    
+//                 &-close {
+//                 }
+//             }
+//             &--checkbox {
+
+//             }
+//             &--combine {
+    
+//                 &-text {
+//                 }
+                
+//             }
+//             &--list {
+//                 &-gen {
+    
+//                     &-nocart {
+    
+//                         &-text {
+//                         }
+//                     }
+    
+//                 }
+    
+//                 &-store {
+    
+//                     &-block {
+
+//                     }
+    
+//                     &-wrap {
+//                         &-imgcont {   
+//                             &-img {
+//                                 height: 6rem;
+//                                 width: 6rem;
+//                             } 
+//                         }
+    
+//                         &-prop { 
+//                             &-chara {
+//                                 &-name {
+//                                     font-size: 1rem;
+//                                 }
+    
+//                                 &-del {
+                                   
+    
+//                                     button {
+                                       
+//                                         svg {
+//                                             height: 1.2rem; 
+//                                         }
+//                                     }                                   
+//                                 }
+//                             }
+    
+//                             &-location {
+//                                 padding: 0 10px;
+//                                 font-size: small;
+//                             }
+                           
+    
+//                             &-atr {
+//                                 &-price {
+                                    
+//                                     &-sign {
+//                                         font-size: 1rem;
+//                                     }
+//                                 }
+//                                 &-money {
+//                                 }
+    
+//                                 &-input {
+//                                     div {
+    
+//                                         span {
+//                                             padding: 0.1rem;
+    
+//                                             svg {
+//                                                 height: 0.6rem;                                  
+//                                             }
+//                                         }
+                                        
+                                     
+//                                     }
+    
+//                                     &-value {
+    
+                                
+            
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+    
+//             }
+//         }
+//         &---side {
+//             width: 100%;
+//             margin-top: 1rem;
+//             // position: fixed;
+//             // bottom: 15%;
+    
+//             &--summary {
+                
+//                 &-text {
+//                 }
+    
+//                 &-total {
+
+//                     &-price {
+//                         font-size: 1.3rem;
+//                     }
+//                 }
+    
+//                 &-btn {
+//                     font-size: 1rem;
+//                 }
+
+//             }
+    
+//             &--structure {
+//                 display: none;
+//                 &-name {
+//                     font-size: 1rem;
+//                 }
+    
+//                 &-payment {
+//                     img {
+//                         height: 0.8rem;
+//                     }
+//                 }
+    
+//                 &-header {
+//                     font-size: 1rem;
+//                 }
+//                 &-text {
+//                     font-size: small;
+//                 }
+            
+//             }
+//         }
+//     }
+// }
+@media screen and (max-width: 400px) {
+    .div {
+        width: 95%;
+        padding: 0rem;
+    }
+    .cart__body {
+        flex-direction: column;
+        &---main {
+    
+            &--header {
+    
+                &-text {
+                    padding: 0rem;
+                    font-size: 1.3rem;
+                }
+    
+                &-close {
+                    padding: 0rem;
+                    font-size: 1.5rem;
+                    background: none;
+                }
+                &-close:hover {
+                    color: #dbb613;
+                }
+            }
+            &--checkbox {
+
+            }
+            &--combine {
+                padding: 7px;
+                margin-top: 8px;
+                font-size: small;
+                &-text {
+                }
+                
+            }
+            &--list {
+                &-gen {
+    
+                    &-nocart {
+    
+                        &-text {
+                        }
+                    }
+    
+                }
+    
+                &-store {
+                    margin-top: 1px;
+                    padding: 0 0px;    
+                    &-block {
+                        padding: 0.3rem;
+                        font-size: 13px;
+                    }
+    
+                    &-wrap {
+                        &-imgcont {  
+                            width: 25%; 
+                            &-img {
+                                height: 4rem;
+                                width: 4rem;
+                            } 
+                        }
+    
+                        &-prop { 
+                            margin-left: 0;
+                            &-chara {
+                                &-name {
+                                    // font-size: 1rem;
+                                    font-size: 12px;
+                                }
+    
+                                &-del {
+                                   
+    
+                                    button {
+                                       
+                                        svg {
+                                            height: 1rem; 
+                                        }
+                                    }                                   
+                                }
+                            }
+    
+                            &-location {
+                                // padding: 0 10px;
+                                font-size: 9px;
+                                margin-top: 2px;
+                            }
+                           
+    
+                            &-atr {
+                                margin-top: 5px;
+                                &-price {
+                                    
+                                    &-sign {
+                                        font-size: 0.8rem;
+                                    }
+                                }
+                                &-money {
+                                }
+    
+                                &-input {
+                                    div {
+                                        // height: 0.1px;
+                                        span {
+                                            // padding: 0.1rem;
+                                            // height: 1;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            svg {
+                                                height: 0.7rem;                                  
+                                            }
+                                        }
+                                        
+                                     
+                                    }
+    
+                                    &-value {
+                                        font-size: 13.5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+            }
+        }
+        &---side {
+            width: 100%;
+            margin-top: 1rem;
+            margin-left: 0rem;
+            // position: fixed;
+            // bottom: 15%;
+    
+            &--summary {
+                
+                &-text {
+                    font-size: 16px;
+                }
+    
+                &-total {
+
+                    &-price {
+                        font-size: 1rem;
+                    }
+                }
+    
+                &-btn {
+                    font-size: 16px;
+                    margin-left: 0rem;
+                    padding: 5px 5px;
+                }
+
+            }
+    
+            &--structure {
+                display: none;
+                &-name {
+                    font-size: 1rem;
+                }
+    
+                &-payment {
+                    img {
+                        height: 0.8rem;
+                    }
+                }
+    
+                &-header {
+                    font-size: 1rem;
+                }
+                &-text {
+                    font-size: small;
+                }
+            
+            }
+        }
+    }
+}

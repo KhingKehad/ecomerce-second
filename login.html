@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/login-script.js"></script>
+    <link rel="shortcut icon" href="img/Kadee-Logo/Kadee-Main-icon.png" type="image/x-icon">
+    <title>Kadee | Log in</title>
+    
+</head>
+<body>
+    <div class="pill">
+
+        <div class="pill__logo">
+            <img class="pill-pic" src="img/Kadee-Logo/Kadee-main-logo.png" alt="" srcset="">
+        </div>
+        <div class="pills">
+
+            <div class="pills__buttons">
+                <div class="pills__buttons--login pills__buttons--active">Login</div>
+                <div class="pills__buttons--signup">Register</div>
+            </div>
+
+            <div class="pills__options">
+                <div class="pills__options--text">Sign up with:</div>
+                <div class="pills__options---buttonholder">
+                    <a class="pills__options---buttonholder--btn">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a class="pills__options---buttonholder--btn">
+                        <i class='bx bxl-google'></i>
+                    </a>
+                    <a class="pills__options---buttonholder--btn">
+                        <i class='bx bxl-twitter' ></i>
+                    </a>
+                    <a class="pills__options---buttonholder--btn">
+                        <i class='bx bxl-github' ></i>
+                    </a>
+                </div>
+                <div class="pills__options--text">or: </div>
+                
+            </div>
+
+            <div class="sidebyside">
+                
+                <!-- LOGIN IN -->
+                <form class="login__form">
+                    <div class="login__form--outline mb-4">
+                        <input type="text" id="loginName" class="login__form--outline-control" placeholder="Name" />
+                        <ion-icon id="error" name="alert-circle-outline"></ion-icon>
+                        <ion-icon id="sucess" name="checkmark-circle-outline"></ion-icon>
+                        <small class="login__form--outline-small" id="nameLabel" for="loginName">Error message</small> 
+                        <!-- FOR validInputs function in login-script.js 
+                            <input type="text" id="loginName" class="login__form--outline-control" oninput="validInputs()"/>
+                            <label class="login__form--outline-label" id="nameLabel" for="loginName">Name</label> 
+                        -->
+                    </div>
+                    <div class="login__form--outline mb-4">
+                        <input type="password" id="loginPassword" class="login__form--outline-control" placeholder="Password" />
+                        <ion-icon id="error" name="alert-circle-outline"></ion-icon>
+                        <ion-icon id="sucess" name="checkmark-circle-outline"></ion-icon>
+                        <small class="login__form--outline-small" id="passwordLabel" for="loginPassword">Error message</small> 
+
+                        <!--  FOR validInputs function in login-script.js 
+                            <input type="password" id="loginPassword" class="login__form--outline-control" oninput="validInputs()"/>
+                            <label class="login__form--outline-label" id="passwordLabel" for="loginPassword">Password</label> 
+                        -->
+                    </div>
+                    <div class="login__form--check">
+                        <div class="login__form--check-inputdiv">
+                            <input class="login__form--check-input me-2" type="checkbox" value="" id="loginCheck" 
+                            aria-describedby="loginCheckHelpText" required/>
+                            
+                            <label class="login__form--check-label" for="loginCheck">
+                            Remember me <br><p class="login__form--check-label2">Click the checkbox before you continue</p>
+                            </label>
+                            
+                        </div>
+                        
+                        <div class="login__form--check-forgot">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <a type="submit" class="login__form--submit" href="#">Sign in</a>
+
+                    <div class="text-center">
+                        <p>Not a member? <a id="btnLoginRegister" href="#" style="text-decoration:none; color: blue;">Register</a></p>
+                    </div>
+                </form>
+
+                 <!-- REGISTER -->
+                <form class="register__form half-hidden" id="register">
+                    <div class="register__form--outline mb-4">
+                        <input type="text" id="registerName" class="register__form--outline-control" placeholder="Name"/>
+                        <ion-icon name="alert-circle-outline" id="error"></ion-icon>
+                         <ion-icon name="checkmark-circle-outline" id="success"></ion-icon> 
+                        <small class="register__form--outline-small" for="registerName">Error message</small>  
+                         <!-- For validInputs function in login-script.js
+                            <input type="text" id="registerName" class="register__form--outline-control" />
+                            <label class="register__form--outline-label" for="registerName">Name</label>  
+                        -->
+                    
+                        
+                    </div>
+                    <div class="register__form--outline mb-4">
+                        <input type="text" id="registerUsername" class="register__form--outline-control" placeholder="Username"/>
+                        <ion-icon name="alert-circle-outline" id="error"></ion-icon>
+                        <ion-icon name="checkmark-circle-outline" id="success"></ion-icon> 
+                        <small class="register__form--outline-small" for="registerUsername">Error message</small> 
+                        <!-- For validInputs function in login-script.js
+                            <input type="text" id="registerUsername" class="register__form--outline-control" />
+                            <label class="register__form--outline-label" for="registerUsername">Username</label> 
+                        -->
+                    </div>
+                    <div class="register__form--outline mb-4">
+                        <input type="text" id="registerNumber" class="register__form--outline-control number" placeholder="Number"/>
+                        <ion-icon name="alert-circle-outline" id="error"></ion-icon>
+                        <ion-icon name="checkmark-circle-outline" id="success"></ion-icon> 
+                        <small class="register__form--outline-small" for="registerNumber">Error message</small> 
+                        <select name="" id="" class="register__form--outline-select">
+                            <option value="+234">+234</option>
+                            <option value="">+24</option>
+                            <option value="">+34</option>
+                            <option value="">+23</option>
+                        </select>
+                        
+                        <!-- For validInputs function in login-script.js
+                            <input type="text" id="registerNumber" class="register__form--outline-control" />
+                            <label class="register__form--outline-label" for="registerNumber">Number</label> 
+                        -->
+                    </div>
+                    <div class="register__form--outline mb-4">
+                        <input type="email" id="registerEmail" class="register__form--outline-control" placeholder="Email"/>
+                        <ion-icon name="alert-circle-outline" id="error"></ion-icon>
+                        <ion-icon name="checkmark-circle-outline" id="success"></ion-icon> 
+                        <small class="register__form--outline-small" for="registerEmail">Error message</small>
+                        <!-- For validInputs function in login-script.js
+                            <input type="email" id="registerEmail" class="register__form--outline-control" />
+                            <label class="register__form--outline-label" for="registerEmail">Email</label> 
+                        -->
+                    </div>
+                    <div class="register__form--outline mb-4">
+                        <input type="password" id="registerPassword" class="register__form--outline-control" placeholder="Password"/>
+                        <ion-icon name="alert-circle-outline" id="error"></ion-icon>
+                        <ion-icon name="checkmark-circle-outline" id="success"></ion-icon>  
+                        <small class="register__form--outline-small" for="registerPassword">Error message</small> 
+                        <!-- For validInputs function in login-script.js
+                            <input type="password" id="registerPassword" class="register__form--outline-control" />
+                            <label class="register__form--outline-label" for="registerPassword">Password</label> 
+                        -->
+                    </div>
+                    <div class="register__form--outline mb-4">
+                        <input type="password" id="registerRepeatPassword" class="register__form--outline-control" placeholder="Repeat password"/>
+
+                        <ion-icon name="alert-circle-outline" id="error"></ion-icon>
+                        <ion-icon name="checkmark-circle-outline" id="success"></ion-icon> 
+                        <small class="register__form--outline-small" for="registerRepeatPassword">Error message</small> 
+                        <!-- For validInputs function in login-script.js
+                            <input type="password" id="registerRepeatPassword" class="register__form--outline-control" />
+                            <label class="register__form--outline-label" for="registerRepeatPassword">Repeat password</label> 
+                        -->
+                    </div>
+                    <div class="register__form--check">
+                        <input class="register__form--check-input me-2" type="checkbox" value="" id="registerCheck" required
+                        aria-describedby="registerCheckHelpText" />
+                        <label class="register__form--check-label" for="registerCheck">
+                        I have read and agree to the terms <p class="register__form--check-label-error">Click the checkbox to continue</p>
+                        </label>
+                    </div>
+                    <a type="submit" class="register__form--submit" href="#">Sign up</a>
+                </form>
+            </div>
+
+           
+        </div>
+    </div>
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

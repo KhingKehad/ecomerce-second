@@ -1,0 +1,100 @@
+
+$color-primary: #EBD96B;
+$color-grad-2: #E0C340;
+$color-primary-dark-1: #dbb613; 
+$color-grey-light-3: #C2C8DA; // Light text (placeholder)
+$color-grey-dark-1: #dbb613; // Normal text
+$color-grey-dark-2:  #E6C744;
+; // Lighter text 
+// $color-grey-light-1: #f9f5f3; // Light background
+// $color-grey-light-2: #f2efee; // Light lines
+// $color-grad-1: #fbdb89;
+// $color-primary: #f59a83;
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.btn,
+.btn:visited{
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #EBD96B;
+    color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    transition: all 0.5s;
+}
+
+.spinner {
+   // margin: 5rem auto;
+    text-align: center;
+    padding-top: 5rem;
+  
+    svg {
+      height: 3rem;
+      width: 3rem;
+      fill: #dbb613;
+      fill: red;
+      animation: rotate 2s infinite linear;
+    }
+}
+
+.full-hidden {
+    display: none;
+}
+
+.to-top {
+    background-color: #EBD96B  !important;
+    color: #000 !important;
+    font-size: 1rem;
+}
+
+.to-top:hover {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+@media screen and (max-width: 1100px) {
+    .to-top {
+        padding: 0.8rem 1rem;
+    }   
+}
+
+.cart-icon {
+    margin-right: 1rem;
+    
+}
+.hidden {
+    // display: none;
+     opacity: 0;
+     visibility: hidden;
+}

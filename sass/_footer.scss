@@ -1,0 +1,170 @@
+.footer {
+    background-color: rgb(45, 41, 41);
+    color: white;
+    padding: 3rem;
+    color: #8E8E8E ;
+
+    &__paragraph {
+        &--header {
+            width: 8rem;
+            height: auto;         
+        }
+
+        &--text {
+            margin-bottom: 2rem;
+        }
+
+        &--logoapp {
+            display: flex;
+            &-fb,
+            &-twitter,
+            &-ig,
+            &-whatsapp {
+                height: 3rem;
+                width: 3rem;
+                background-color: #EBD96B;
+                border-radius: 10px;
+                //text-align: center;
+                margin-right: 1rem; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &-fb-img,
+            &-twitter-img,
+            &-ig-img,
+            &-whatsapp-img {
+                height: 1rem;
+                width: 1rem;         
+            }
+        }
+    }
+
+    &__table {
+       th,
+       td {
+            padding: 8px;
+            text-align: left;
+            border-collapse: collapse;
+            width: 14rem;
+       }
+       th a:hover,
+       th a:active {
+        color: #EBD96B;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+            transform: rotate(5deg) scale(1.3) !important;
+            display: inline-block;
+        }
+        th a {
+            color: #fff;
+        }
+        a {
+            text-decoration: none;
+            color: #8E8E8E;
+        }     
+        td a:hover,
+        a:active {
+            color: #EBD96B;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+            transform: rotate(5deg) scale(1.3) !important;
+            display: inline-block;   
+        }
+    }
+    &--top {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;  
+    }
+    &__copyright {
+        text-align: center;
+        margin-top: 2rem; 
+        padding-bottom: 2rem;
+        a {
+            color: inherit;
+            text-decoration: none;
+            display: inline-block;
+        }
+        a:hover {
+            color: #EBD96B;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+            transform: rotate(5deg) scale(1.3)      
+        }
+    }
+}
+@media screen and (max-width: 1100px) {
+    .footer {   
+        &__paragraph {
+            &--header {
+                width: 8rem;
+                height: auto;
+            }
+            &--text {
+                margin-bottom: 2rem;
+            }
+            &--logoapp {
+                &-fb,
+                &-twitter,
+                &-ig,
+                &-whatsapp {
+                    height: 2rem;
+                    width: 2rem;
+                    margin-right: 1rem; 
+                }
+                &-fb-img,
+                &-twitter-img,
+                &-ig-img,
+                &-whatsapp-img {
+                    height: 0.8rem;
+                    width: 0.8rem;             
+                }
+            }
+        }
+        &__table {
+            th,
+            td {
+                padding: 5px;
+                width: 10rem;
+            }            
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .footer {
+        padding: 1rem;
+        &--top {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;  
+        }
+        &__paragraph {
+            &--text {
+                font-size: small;
+            }
+        }      
+        &__table {
+            th,
+            td {
+                padding: 5px;
+                width: 10rem;
+                font-size: bigger;
+                font-size: small;
+            }            
+        }
+        &__copyright {
+            font-size: small;
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .footer {
+        padding: 1rem;
+        &--top {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &__paragraph {
+            text-align: center;
+        }
+    }
+}

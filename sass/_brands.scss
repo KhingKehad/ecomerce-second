@@ -1,0 +1,60 @@
+///////////////////////////
+/* BRANDS  */
+////////////////////////////
+.brands {
+    width: 100%;
+    margin-bottom: 4rem;
+
+    &__container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        background-color: #EBD96B;
+        height: min-content;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        
+        //margin-right: 4rem;
+
+        &-img1,
+        &-img2,
+        &-img3,
+        &-img4,
+        &-img5,
+        &-img6 {
+            // margin-right: 3rem;
+            height: auto;
+            width: 5rem;
+            
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .brands {
+    
+        &__container {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            background-color: #EBD96B;
+            height: min-content;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            
+            //margin-right: 4rem;
+    
+            &-img1,
+            &-img2,
+            &-img3,
+            &-img4,
+            &-img5,
+            &-img6 {
+                margin-right: 2.5rem;
+                height: auto;
+                width: 5rem;
+                padding-bottom: 2rem;
+                
+            }
+        }
+    }
+}

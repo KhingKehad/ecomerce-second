@@ -1,0 +1,60 @@
+/////////////////////////////////////////////////////////////
+// Hero-Section
+
+/*
+@keyframes heroSectionHeaderAnimation {
+    from {
+        transform: translateX(-200px);
+    } to {
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes heroSectionImgAnimation {
+    from {
+        transform: translateX(+200px);
+    } to {
+        transform: translateX(0);
+    }
+}
+*/
+
+////////////////////////////////////////////////////
+// Arrivals
+@keyframes arrivalsImgAnimation1 {
+    from {
+        transform: translateX(-200px);
+    } to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes arrivalsImgAnimation2 {
+    from {
+        transform: translateY(+200px);
+    } to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes arrivalsImgAnimation3 {
+    from {
+        transform: translateX(+200px);
+    } to {
+        transform: translateX(0);
+    }
+}
+
+
+///////////////////////////////////////////////////////////////////
+// SPINNER
+@keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+}

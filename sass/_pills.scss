@@ -1,0 +1,730 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+   // position: relative;
+    //overflow-x: hidden;
+    // background-color: red;
+}
+
+.pill {
+    text-align: center;
+    padding: 3rem 0;
+    height: max-content;
+    //background-color: green;
+}
+.pill-pic {
+    height: auto;
+    width: 10rem;
+    margin: 2rem 0;
+}
+
+.pills {
+    // background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    //padding-top: ;
+
+    &__buttons {
+        display: flex;
+        text-transform: uppercase;
+       // background-color: green;
+       margin-bottom: 1rem;
+       cursor: pointer;
+
+        &--login {
+            color: black;
+            background-color: #f4eaea;
+            padding: 0.8rem 5rem;
+            margin-right: 0.3rem;
+        }
+
+        &--signup {
+            // color: rgb(64, 64, 202);
+            // background-color: rgb(190, 190, 247);
+            color: black;
+            background-color: #f4eaea;
+            padding: 0.8rem 5rem;
+            margin-left: 0.3rem; 
+        }
+
+        &--active {
+            color: rgb(64, 64, 202);
+            background-color: rgb(190, 190, 247);
+        }
+    }
+
+    &__options {
+        &--text {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        &---buttonholder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &--btn {
+                margin-right: 1rem;
+                margin-left: 1rem;
+                border-radius: 50%;
+                height: 2rem;
+                width: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &--btn:hover {
+                background-color: #f5f5f5;
+            }
+            &--btn i {
+                background: transparent;
+                outline: none;
+                background-color: none;
+                border: none;   
+            }         
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .pills {  
+        &__buttons {  
+            &--login {
+                padding: 0.6rem 4rem;
+            }  
+            &--signup {
+                padding: 0.6rem 4rem;
+            }
+            &--active {
+            }
+        }   
+        &__options {
+            &--text {
+                font-size: 0.9rem;
+            } 
+            &---buttonholder {
+                &--btn {
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    background-color: aliceblue;
+                }
+                &--btn i {
+                    font-size: 1rem; 
+                }         
+            }
+        }
+    }
+    
+}
+@media screen and (max-width: 500px) {
+    .pills {
+        &__buttons {
+            &--login {
+                padding: 0.4rem 2rem;
+            } 
+            &--signup {
+                padding: 0.1rem 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;    
+            }
+    
+            &--active {
+            }
+        }
+    
+        &__options {
+            &--text {
+                font-size: 0.9rem;
+            }
+   
+            &---buttonholder {   
+                &--btn {
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    background-color: aliceblue;
+                }
+                &--btn:hover {
+                }
+                &--btn i {
+                    font-size: 1rem; 
+                }         
+            }
+        }
+    }
+}
+
+
+// REGISTER
+.register__form {
+    margin-top: 0.5rem;
+    width: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0%;    
+   transition: all 0.5s;
+
+    &--outline {
+       position: relative;
+
+        &-control {
+            height: 3rem;
+            width: 100%;
+            margin: 1rem 0;
+            border: 2px solid #dbb613;
+            outline: none;
+            border-radius:8px;
+            color: #dbb613;
+            line-height: 2rem;
+            font-size: 1rem; 
+            font-weight: 400;
+            
+
+            &:focus {
+                + {
+                    .register__form--outline-label {
+                        top: +5px;
+                        background-color: white;
+                        font-size: 85%;
+                    }
+                }
+            }
+        }
+        &-control[type=text],
+        &-control[type=password],
+        &-control[type=email],
+        &-control::placeholder {
+            color: #dbb613;
+            padding-left: 1rem;
+            
+        }
+      
+        &-label {
+            position: absolute;
+            top: 35%;
+            left: 2%;
+            transition: all 0.3s;
+            color: #dbb613;
+            
+        }
+
+        &-small {
+            position: absolute;
+            bottom: -2px;
+            left: 10px;
+            color: red;
+            visibility: hidden;
+        }
+
+        ion-icon {
+            position: absolute;
+            top : 35px;
+            right: 0px;
+            visibility: hidden;
+            color: red;
+        }
+
+        &-select {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            padding-left: 1rem;
+            outline: none;
+            border: none;
+            background: none;
+            border-radius:8px;
+            color: #dbb613;
+
+            font-size: 1rem; 
+            font-weight: 400;
+        }
+    }
+
+    &--check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        input {
+            height: 1.2rem;
+            width: 1.2rem;
+            margin-right: 0.8rem;
+        }
+        &-label { 
+
+            &-error {
+                color: red;
+                font-size: smaller;
+                display: none;
+            }
+        }
+    }
+
+    &--submit {
+        background-color: #EBD96B;
+        color: #fff;
+        display: inline-block;
+        text-transform: uppercase;
+        height: 3rem;
+        width: 105%;
+        border-radius: 8px;
+        transition: all 0.3s;
+        margin: 1rem 0;
+        border: none;
+        outline: none;
+        font-weight: 400;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+    &--submit:hover {
+        background-color: #dbb613;
+        color: #fff;
+        
+    }
+}
+.number[type=text] {
+    padding-left: 5.1rem !important;
+    width : 83%;
+}
+
+@media screen and (max-width: 800px) {
+    .number[type="text"] {
+        width: 73%;
+
+    }
+    .register__form {   
+        &--outline {
+            &-control {
+                height: 2.9rem;
+                width: 90%;
+                font-size: 0.9rem; 
+                &:focus {
+                    + {
+                        .register__form--outline-label {
+                        }
+                    }
+                }
+            }
+            &-control[type=text],
+            &-control[type=password],
+            &-control[type=email],
+            &-control::placeholder {        
+            }
+          
+            &-label {             
+            }
+    
+            &-small {
+                left: 20px;
+                font-size: 0.8rem;
+            }
+    
+            ion-icon {
+                right: 21px;
+            }
+    
+            &-select {
+            }
+        }
+        &--check {
+            font-size: small;
+            input {
+                height: 1rem;
+                width: 1rem;
+            }
+            &-label {  
+                &-error {
+                }
+            }
+        }
+    
+        &--submit {
+            height: 2.5rem;
+            font-size: 1.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+        }
+    }
+}
+@media screen and (max-width: 500px) {   
+    .number[type="text"] {
+        width: 52%;
+
+    }
+    .register__form {    
+        &--outline {   
+            &-control {
+                height: 2rem;
+                width: 70%;
+                font-size: 0.9rem;
+                &:focus {
+                    + {
+                        .register__form--outline-label {
+                        }
+                    }
+                }
+            }
+            &-control[type=text],
+            &-control[type=password],
+            &-control[type=email],
+            &-control::placeholder {            
+            }   
+            &-label {
+            } 
+            &-small {
+                left: 57px;
+                font-size: 0.7rem;
+            }
+            ion-icon {
+                top : 28px;
+                right: 55px;
+            } 
+            &-select {  
+                top: 24px;
+                left: 1px;
+                padding-left: 4rem;              
+                font-size: 0.9rem;       
+            }
+        }   
+        &--check {
+            font-size: small;
+            input {
+                height: 1rem;
+                width: 1rem;
+            }
+            &-label {  
+                &-error {
+                }
+            }
+        }
+    
+        &--submit {
+            height: 2rem;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+          
+        }
+    }
+}
+/*
+.register__form--outline-control:focus + .register__form--outline-label{
+    color: red;
+    top: 0;
+    background-color: white;
+}
+
+.register__form--outline-control:focus ~ label{
+    top: 0;
+    background-color: blue;
+}
+.login__form--outline-control:valid ~ label{
+    top: 0;
+    background-color: blue;
+}
+
+.register__form--outline-control:valid ~ label{
+    top: 0;
+    background-color: red;
+}
+*/
+// LOGIN 
+.login__form {
+    margin-top: 0.5rem;
+   // background-color: red;
+    width: 100%;
+    //margin-right: 1.5rem;
+    //transform: translateX(-100%);
+    position: absolute;
+    left: 0%;
+    transition: all 0.5s;
+
+    &--outline {
+        // display: flex;
+        //width: 100%;
+       //background-color: green;
+       position: relative;
+
+        &-control {
+            height: 3rem;
+            width: 100%;
+           //background-color: yellow;
+            //width: 20rem;
+            margin: 1rem 0;
+            border: 2px solid #dbb613;
+            outline: none;
+            border-radius:8px;
+            color: #dbb613;
+            line-height: 2rem;
+            padding-left: 1rem;
+            font-size: 1.3rem;  
+            font-weight: 400;
+            
+
+            &:focus {
+                + {
+                    .login__form--outline-label {
+                        //color: black;
+                        top: +5px;
+                        background-color: white;
+                        //background-color: yellow;
+                        font-size: 85%;
+                        //padding: 0 5px;
+                    }
+                }
+            }
+        }
+        &-control[type=text],
+        &-control[type=password],
+        &-control[type=email],
+        &-control::-webkit-input-placeholder {
+            color: #dbb613;
+            //padding: 0px 10px; 
+        }
+      
+        &-label {
+            position: absolute;
+            top: 35%;
+            left: 2%;
+            transition: all 0.3s;
+            color: #dbb613;
+            
+        }
+
+        &-small {
+            position: absolute;
+            bottom: -2px;
+            left: 10px;
+            color: red !important;
+            visibility: hidden;
+        }
+
+        ion-icon {
+            position: absolute;
+            top : 35px;
+            right: 0px;
+            color: red;
+            visibility: hidden;
+        }
+    }
+
+    &--check {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        input {
+            height: 1.2rem;
+            width: 1.2rem;
+            margin-right: 0.8rem;
+        }
+
+        &-forgot {
+            a {
+                text-decoration: none;
+                display: inline-block;
+            }
+        }
+
+        &-label2 {
+            color: red;
+            font-size: smaller;
+            // background-color: #000;
+            padding-right: 4px;
+            padding-left: 4px;
+            display: none;
+        }
+    }
+
+    &--submit {
+        background-color: #EBD96B;
+        color: #fff;
+        //padding: 6px 15rem;
+        text-transform: uppercase;
+        height: 3rem;
+        width: 105%;
+        border-radius: 8px;
+        transition: all 0.3s;
+         margin: 1rem 0;
+        border: none;
+        outline: none;
+        font-weight: 400;
+        font-size: 1.5rem;
+        display: inline-block;
+        text-decoration: none;
+    }
+    &--submit:hover {
+        background-color: #dbb613;
+        color: #fff;
+        
+    }
+}
+
+@media  screen and (max-width: 800px){
+    .text-center {
+        font-size: 0.9rem;
+    }
+    .login__form {
+        &--outline {    
+            &-control {
+                    height: 2.9rem;
+                    width: 90%;
+                    font-size: 0.9rem;
+    
+                &:focus {
+                    + {
+                        .login__form--outline-label {
+                        }
+                    }
+                }
+            }
+            &-control[type=text],
+            &-control[type=password],
+            &-control[type=email],
+            &-control::-webkit-input-placeholder {
+                color: #dbb613;
+            }       
+            &-label {            
+            }    
+            &-small {
+            }  
+            ion-icon {
+                right: 21px;
+            }
+        }
+    
+        &--check {
+            input {
+                height: 1rem;
+                width: 1rem;             
+            }
+            &-forgot {
+                a {
+                    font-size: 0.9rem;
+                }
+            }
+            &-label {
+                font-size: 0.9rem;
+            }
+            &-label2 {
+                font-size: 0.8rem;
+            }
+        }
+    
+        &--submit {
+            height: 2.5rem;
+            font-size: 1.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+@media  screen and (max-width: 500px){
+    .text-center {
+        font-size: 0.8rem;
+    }
+    .login__form {
+        &--outline {
+            &-control {
+                    height: 2rem;
+                    width: 70%;
+                    font-size: 0.9rem; 
+                &:focus {
+                    + {
+                        .login__form--outline-label {
+                        }
+                    }
+                }
+            }
+            &-control[type=text],
+            &-control[type=password],
+            &-control[type=email],
+            &-control::-webkit-input-placeholder {
+                color: #dbb613;
+            }
+          
+            &-label {               
+            }
+    
+            &-small {
+                left: 57px;
+                font-size: 0.7rem;
+            }
+    
+            ion-icon {
+                top : 28px;
+                right: 55px;
+            }
+        }
+    
+        &--check {
+            flex-direction: column;
+    
+            input {
+                height: 1rem;
+                width: 1rem;              
+            }
+    
+            &-forgot {
+                margin-top: 3px;
+                a {
+                    font-size: 0.8rem;
+                }
+            }
+            &-label {
+                font-size: 0.8rem;
+            }
+    
+            &-label2 {
+                font-size: 0.7rem;
+            }
+        }
+        &--submit {
+            height: 2rem;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+}
+.sidebyside {
+    // display: flex;
+    // flex-direction: column;
+    width: 380px;
+    height: 480px;
+    // background-color: blue;
+   // text-align: center;
+    //overflow: hidden;
+    // justify-content: center ;
+    // align-items:start;
+    position: relative; 
+}
+
+.half-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
